@@ -5,6 +5,7 @@ package actions
 import kotlin.js.JsExport
 import kotlin.js.JsName
 
+@Deprecated("use kevlar instead")
 @Suppress("NON_EXPORTABLE_TYPE")
 abstract class ActionsBuilder<out A, in H> {
     abstract fun on(name: String, key: String = name.lowercase(), handler: H): A

@@ -5,6 +5,7 @@ package actions
 
 import kotlin.js.JsExport
 
+@Deprecated("use kevlar instead")
 interface MutableAction1<I, R> : Action1<I, R>, MutableAction<(I) -> R> {
     override var handler: (I) -> R
 

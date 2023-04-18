@@ -2,6 +2,7 @@ package actions.internal
 
 import actions.MutableAction0
 
+@Deprecated("use kevlar instead")
 @PublishedApi
 internal class MutableAction0Impl<R>(
     override val name: String,
