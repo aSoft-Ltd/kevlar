@@ -2,7 +2,7 @@
 
 a kotlin multiplatform library for handling client side UI actions
 
-![Maven](https://img.shields.io/maven-central/v/tz.co.asoft/Kevlar/2.0.13?style=for-the-badge)
+![Maven](https://img.shields.io/maven-central/v/tz.co.asoft/kevlar/unspecified?style=for-the-badge)
 ![Kotlin](https://img.shields.io/badge/kotlin-multiplatform-blue?style=for-the-badge&logo=kotlin&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=&logoColor=white)
@@ -15,7 +15,7 @@ a kotlin multiplatform library for handling client side UI actions
 
 ```kotlin
 dependencies {
-    implementation("tz.co.asoft:kevlar-core:2.0.13")
+    implementation("tz.co.asoft:kevlar-core:unspecified")
 }
 ```
 
