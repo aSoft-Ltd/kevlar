@@ -12,7 +12,7 @@ inline fun <I,O> action1(
     noinline handler: (I) -> O
 ): Action1<I, O> = MutableAction1Impl(name, key, handler)
 
-inline fun <I,O> mutableAction1I0R(
+inline fun <I,O> mutableAction1(
     name: String,
     key: String = name.lowercase(),
     noinline handler: (I) -> O
