@@ -5,4 +5,4 @@ package kevlar
 
 import kotlin.js.JsExport
 
-interface Action0<out R> : Action<() -> R>
+interface Action0Container<out R> : Action0<R>, ActionContainer<() -> R>

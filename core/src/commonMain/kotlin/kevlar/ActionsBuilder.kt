@@ -2,12 +2,18 @@
 
 package kevlar
 
+import kollections.List
 import kotlin.js.JsExport
 import kotlin.js.JsName
 
 @Suppress("NON_EXPORTABLE_TYPE")
 abstract class ActionsBuilder<out A, in H> {
     abstract fun on(name: String, key: String = name.lowercase(), handler: H): A
+
+    abstract fun sub(name: String, key: String = name.lowercase(), builder: ActionsBuilder<A, H>.() -> Unit)
+
+    @JsName("subActions")
+    abstract fun sub(name: String, key: String = name.lowercase(), actions: List<@UnsafeVariance A>)
 
     @JsName("_ignore_onAdd")
     fun onAdd(entity: String, handler: H) = on("Add $entity", handler = handler)
