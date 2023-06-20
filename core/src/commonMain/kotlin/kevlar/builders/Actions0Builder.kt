@@ -24,4 +24,10 @@ open class Actions0Builder<R>(
     override fun sub(name: String, key: String, actions: List<Action0<R>>) {
         this.actions.add(action0(name, key, actions))
     }
+
+    fun get(): List<Action0<R>> = actions.toIList()
+
+    fun getOrSet(name: String, key: String = name, handler: () -> R): Action0<R> = actions.find {
+        it.name.contentEquals(name, ignoreCase = true)
+    } ?: on(name, key, handler)
 }
