@@ -3,7 +3,7 @@
 
 package kevlar
 
-import kotlin.js.JsExport
+import kotlinx.JsExport
 
 interface Action0<out R> : Action<() -> R> {
     override val asInvoker get() = this as? Action0Invoker

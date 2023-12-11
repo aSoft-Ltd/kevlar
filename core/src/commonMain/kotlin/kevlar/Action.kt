@@ -3,7 +3,7 @@
 
 package kevlar
 
-import kotlin.js.JsExport
+import kotlinx.JsExport
 
 interface Action<out H> {
     val name: String

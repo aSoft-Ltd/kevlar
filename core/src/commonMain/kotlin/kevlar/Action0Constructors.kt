@@ -6,7 +6,7 @@ package kevlar
 import kevlar.internal.Action0ContainerImpl
 import kevlar.internal.Action0InvokerImpl
 import kollections.List
-import kotlin.js.JsExport
+import kotlinx.JsExport
 import kotlin.js.JsName
 
 inline fun <T> action0(

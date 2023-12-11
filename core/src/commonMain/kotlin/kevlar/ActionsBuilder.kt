@@ -3,7 +3,7 @@
 package kevlar
 
 import kollections.List
-import kotlin.js.JsExport
+import kotlinx.JsExport
 import kotlin.js.JsName
 
 @Suppress("NON_EXPORTABLE_TYPE")

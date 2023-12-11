@@ -3,7 +3,7 @@
 
 package kevlar
 
-import kotlin.js.JsExport
+import kotlinx.JsExport
 
 interface ActionInvoker<out H> : Action<H> {
     val handler: H
