@@ -4,7 +4,10 @@ import kevlar.Action0
 import kevlar.ActionsBuilder
 import kevlar.action0
 import kollections.List
-import kollections.toIList
+import kollections.MutableList
+import kollections.add
+import kollections.mutableListOf
+import kollections.find
 
 open class Actions0Builder<R>(
     val actions: MutableList<Action0<R>> = mutableListOf()
@@ -18,14 +21,14 @@ open class Actions0Builder<R>(
 
     override fun sub(name: String, key: String, builder: ActionsBuilder<Action0<R>, () -> R>.() -> Unit) {
         val subBuilder = Actions0Builder<R>().apply(builder)
-        return sub(name, key, subBuilder.actions.toIList())
+        return sub(name, key, subBuilder.actions)
     }
 
     override fun sub(name: String, key: String, actions: List<Action0<R>>) {
         this.actions.add(action0(name, key, actions))
     }
 
-    fun get(): List<Action0<R>> = actions.toIList()
+    fun get(): List<Action0<R>> = actions
 
     fun getOrSet(name: String, key: String = name, handler: () -> R): Action0<R> = actions.find {
         it.name.contentEquals(name, ignoreCase = true)

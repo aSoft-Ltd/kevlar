@@ -4,7 +4,9 @@ import kevlar.Action1
 import kevlar.ActionsBuilder
 import kevlar.action1
 import kollections.List
-import kollections.toIList
+import kollections.MutableList
+import kollections.mutableListOf
+import kollections.add
 
 open class Actions1Builder<I, O>(
     val actions: MutableList<Action1<I, O>> = mutableListOf()
@@ -18,7 +20,7 @@ open class Actions1Builder<I, O>(
 
     override fun sub(name: String, key: String, builder: ActionsBuilder<Action1<I, O>, (I) -> O>.() -> Unit) {
         val subBuilder = Actions1Builder<I, O>().apply(builder)
-        sub(name, key, subBuilder.actions.toIList())
+        sub(name, key, subBuilder.actions)
     }
 
     override fun sub(name: String, key: String, actions: List<Action1<I, O>>) {
