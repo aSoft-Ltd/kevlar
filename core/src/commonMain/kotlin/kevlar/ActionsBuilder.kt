@@ -3,6 +3,8 @@
 package kevlar
 
 import kollections.List
+import kollections.Collection
+import kollections.size
 import kotlinx.JsExport
 import kotlin.js.JsName
 
