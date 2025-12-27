@@ -3,7 +3,6 @@
 
 package kevlar
 
-import kollections.List
 import kotlinx.JsExport
 
 interface ActionContainer<out H> : Action<H> {

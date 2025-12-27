@@ -5,14 +5,13 @@ package kevlar
 
 import kevlar.internal.Action1ContainerImpl
 import kevlar.internal.Action1InvokerImpl
-import kollections.List
 import kotlinx.JsExport
 import kotlin.js.JsName
 
 inline fun <I, O> action1(
     name: String,
     key: String = name.lowercase(),
-    noinline handler: (I) -> O
+    noinline handler: suspend (I) -> O
 ): Action1Invoker<I, O> = Action1InvokerImpl(name, key, handler)
 
 @JsName("action1Container")

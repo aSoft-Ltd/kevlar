@@ -3,10 +3,6 @@ package kevlar.builders
 import kevlar.Action1
 import kevlar.ActionsBuilder
 import kevlar.action1
-import kollections.List
-import kollections.MutableList
-import kollections.mutableListOf
-import kollections.add
 
 open class Actions1Builder<I, O>(
     val actions: MutableList<Action1<I, O>> = mutableListOf()

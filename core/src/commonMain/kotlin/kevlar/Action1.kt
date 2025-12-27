@@ -5,7 +5,7 @@ package kevlar
 
 import kotlinx.JsExport
 
-interface Action1<in I, out R> : Action<(I) -> R> {
+interface Action1<in I, out R> : Action<suspend (I) -> R> {
     override val asInvoker get() = this as? Action1Invoker
     override val asContainer get() = this as? Action1Container
 }

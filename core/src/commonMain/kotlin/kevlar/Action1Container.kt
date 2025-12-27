@@ -5,4 +5,4 @@ package kevlar
 
 import kotlinx.JsExport
 
-interface Action1Container<in I, out R> : Action1<I, R>, ActionContainer<(I) -> R>
+interface Action1Container<in I, out R> : Action1<I, R>, ActionContainer<suspend (I) -> R>

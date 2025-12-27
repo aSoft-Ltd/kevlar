@@ -2,7 +2,6 @@ package kevlar.internal
 
 import kevlar.Action
 import kevlar.Action0Container
-import kollections.List
 
 @PublishedApi
 internal class Action0ContainerImpl<R>(

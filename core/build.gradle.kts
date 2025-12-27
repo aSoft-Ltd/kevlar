@@ -18,7 +18,7 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            api(libs.kollections.interoperable)
+            api(libs.kotlinx.exports)
         }
     }
 }
